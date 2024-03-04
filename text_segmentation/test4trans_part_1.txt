@@ -1,0 +1,162 @@
+⾸⻚ AI资讯 聊天魔法 图⽚魔法 写作魔法 ⾳视频魔法 编程魔法 开源训练国内外开源⼤语⾔模型⼀览表20秒读懂全⽂国内外开源⼤语⾔模型⼀览表国内外开源⼤语⾔模型⼀览表2023-07-19 收藏 分享⼤模型1 Chinese Open Source Language Models本草推荐阅读https://zhuanlan.zhihu.com/p/626536996· 最新最全的开源中⽂⼤语⾔模型列表https://github.com/scir-hi/huatuo-llama-med-chinese· 链接⼤模型与外部知识，智源开源最强语义基于中⽂医学知识的LLaMa指令微调模型 向量模型BGE在⽣物医学领域，LLM模型（如LLaMa，ChatGLM）因为缺乏⼀定的医学专业知识语料⽽表现不佳。
+该项⽬通过医学知识图谱和GPT3.5API · Chinese-LLM开源中⽂⼤语⾔模型合集构建了中⽂医学指令数据集，并对LLaMa模型进⾏了指令微调得到了⼀个针对医学领域的智能问诊模型HuaTuo，相⽐于未经过医学数据指令· 开源语⾳⼤语⾔模型来了！阿⾥基于Qwen-微调的原LLaMa⽽⾔，HuaTuo模型在智能问诊层⾯表现出⾊，可⽣成⼀些更为可靠的医学知识回答；与此同时，基于相同医学数据，该项⽬Chat提出Qwen-Audio!还训练了医疗版本的ChatGLM模型: ChatGLM-6B-Med，· 国内开源的低代码框架有哪些？该团队还即将发布扁鹊模型PienChueh(同为基于医学数据训练的⼤模型)，欢迎⼤家届时使⽤体验。
+· 国外报告90%的AI类产品公司已经实现盈利百川 Baichuan-7B ，⽽国内⼤模型和AIGC的访谈说太卷了https://github.com/baichuan-inc/baichuan-7B · ⼀个专业级 AI 聊天浏览器，开源了！https://huggingface.co/baichuan-inc/baichuan-7Bbaichuan-7B 是由百川智能开发的⼀个开源可商⽤的⼤规模预训练语⾔模型。
+基于 Transformer 结构，在⼤约1.2万亿 tokens 上训练的70亿参数模型，⽀持中英双语，上下⽂窗⼝⻓度为4096。
+在标准的中⽂和英⽂权威 benchmark（C-EVAL/MMLU）上均取得同尺⼨最好的效果。
+原始数据包括开源的中英⽂数据和⾃⾏抓取的中⽂互联⽹数据，以及部分⾼质量知识性数据。
+参考相关数据⼯作，频率和质量是数据处理环节重点考虑的两个维度。
+ 我们基于启发式规则和质量模型打分，对原始数据集进⾏篇章和句⼦粒度的过滤。
+在全量数据上，利⽤局部敏感哈希⽅法，对篇章和句⼦粒度做滤重。
+百川 Baichuan-13B（可商⽤）https://githuB.com/Baichuan-inc/Baichuan-13B更⼤尺⼨、更多数据:Baichuan-13B 在 Baichuan-7B 的基础上进⼀步扩⼤参数量到130亿，并且在⾼质量的语料上训练了1.4万亿 tokens，超过 LLaMA-13B40%，是当前开源13B 尺⼨下训练数据量最多的模型。
+⽀持中英双语，使⽤ ALiBi 位置编码，上下⽂窗⼝⻓度为4096。
+同时开源预训练和对⻬模型:预训练模型是适⽤开发者的『 基座 』，⽽⼴⼤普通⽤户对有对话功能的对⻬模型具有更强的需求。
+因此本次开源我们同时发布了对⻬模型（Baichuan-13B-Chat），具有很强的对话能⼒，开箱即⽤，⼏⾏代码即可简单的部署。
+更⾼效的推理:为了⽀持更⼴⼤⽤户的使⽤，我们本次同时开源了 int8和 int4的量化版本，相对⾮量化版本在⼏乎没有效果损失的情况下⼤⼤降低了部署的机器资源⻔槛，可以部署在如 Nvidia3090这样的消费级显卡上。
+开源免费可商⽤:Baichuan-13B 不仅对学术研究完全开放，开发者也仅需邮件申请并获得官⽅商⽤许可后，即可以免费商⽤。
+华佗https://mp.weixin.qq.com/s/lwJb8N420xfMTvXJPM2gtghttps://arxiv.org/pdf/2305.15075.pdfhttps://github.com/FreedomIntelligence/HuatuoGPThttps://www.huatuogpt.cn/该论⽂提出的语⾔模型训练⽅法可以结合医⽣和 ChatGPT 的数据，充分发挥它们的互补作⽤，既保留真实医疗数据的专业性和准确性，⼜借助 ChatGPT 的多样性和内容丰富性的特点。
+扁鹊https://github.com/scutcyr/BianQue基于主动健康的主动性、预防性、精确性、个性化、共建共享、⾃律性六⼤特征，华南理⼯⼤学未来技术学院-⼴东省数字孪⽣⼈重点实验室开源了中⽂领域⽣活空间主动健康⼤模型基座ProactiveHealthGPT，包括：经过千万规模中⽂健康对话数据指令微调的⽣活空间健康⼤模型扁鹊（BianQue）经过百万规模⼼理咨询领域中⽂⻓⽂本指令与多轮共情对话数据联合指令微调的⼼理健康⼤模型灵⼼（SoulChat）我们期望，⽣活空间主动健康⼤模型基座ProactiveHealthGPT 可以帮助学术界加速⼤模型在慢性病、⼼理咨询等主动健康领域的研究与应⽤。
+本项⽬为 ⽣活空间健康⼤模型扁鹊（BianQue） 。
+灵⼼（SoulChat）https://github.com/scutcyr/SoulChat我们调研了当前常⻅的⼼理咨询平台，发现，⽤户寻求在线⼼理帮助时，通常需要进⾏较⻓篇幅地进⾏⾃我描述，然后提供帮助的⼼理咨询师同样地提供⻓篇幅的回复，缺失了⼀个渐进式的倾诉过程。
+但是，在实际的⼼理咨询过程当中，⽤户和⼼理咨询师之间会存在多轮次的沟通过程，在该过程当中，⼼理咨询师会引导⽤户进⾏倾诉，并且提供共情，例如：“⾮常棒”、“我理解你的感受”、“当然可以”等等。
+考虑到当前⼗分⽋缺多轮共情对话数据集，我们⼀⽅⾯，构建了超过15万规模的 单轮⻓⽂本⼼理咨询指令与答案（SoulChatCorpus-single_turn） ，回答数量超过50万（指令数是当前的常⻅的⼼理咨询数据集 PsyQA 的6.7倍），并利⽤ChatGPT与GPT4，⽣成总共约100万轮次的多轮回答数据（SoulChatCorpus-multi_turn） 。
+特别地，我们在预实验中发现，纯单轮⻓本⽂驱动的⼼理咨询模型会产⽣让⽤户感到厌烦的⽂本⻓度，⽽且不具备引导⽤户倾诉的能⼒，纯多轮⼼理咨询对话数据驱动的⼼理咨询模型则弱化了模型的建议能⼒，因此，我们混合SoulChatCorpus-single_turn和SoulChatCorpus-multi_turn构造成超过120万个样本的 单轮与多轮混合的共情对话数据集SoulChatCorpus 。
+所有数据采⽤“⽤户：xxx\n⼼理咨询师：xxx\n⽤户：xxx\n⼼理咨询师：”的形式统⼀为⼀种指令格式。
+我们选择了 ChatGLM-6B 作为初始化模型，进⾏了全量参数的指令微调，旨在提升模型的共情能⼒、引导⽤户倾诉能⼒以及提供合理建议的能⼒。
+更多训练细节请留意我们后续发布的论⽂。
+启真医学⼤模型https://github.com/CMKRG/QiZhenGPT本项⽬利⽤启真医学知识库构建的中⽂医学指令数据集，并基于此在Chinese-LLaMA-Plus-7B、CaMA-13B、ChatGLM-6B模型上进⾏指令精调，⼤幅提⾼了模型在中⽂医疗场景下效果，⾸先针对药品知识问答发布了评测数据集，后续计划优化疾病、⼿术、检验等⽅⾯的问答效果，并针对医患问答、病历⾃动⽣成等应⽤展开拓展。
+【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Financehttps://github.com/chancefocus/PIXIUhttps://arxiv.org/abs/2306.05443https://huggingface.co/spaces/ChanceFocus/FLAREThe advancement of Natural Language Processing (NLP) and machine learning (ML) techniques in financial technology (FinTech) has enabled a diverse set of capabilities from predicting stock price movements to advanced financial analytics. However, to effectively understand the complex financial language and concepts, domain-specific LLMs are necessary.Despite prior efforts, there is a lack of open-source financial LLMs and benchmarks to evaluate them. Additionally, these models are not fine-tuned to follow natural language instructions, limiting their performance in downstream financial tasks.To address these gaps, we introduce PIXIU, providing:Open-source LLMs tailored for finance called FinMA, by fine-tuning LLaMA with the dataset constructed in PIXIU.Large-scale, high-quality multi-task and multi-modal financial instruction tuning data FIT.Holistic financial evaluation benchmarks FLARE for assessing financial LLMs.Key FeaturesOpen resources: PIXIU openly provides the financial LLM, instruction tuning data, and datasets included in the evaluation benchmark to encourage open research and transparency.Multi-task: The instruction tuning data in PIXIU cover a diverse set of financial tasks, including four financial NLP tasks and one financial prediction task.Multi-modality: PIXIU's instruction tuning data consist of multi-modality financial data, including time series data from the stock movement prediction task. It covers various types of financial texts, including reports, news articles, tweets, and regulatory filings.Diversity: Unlike previous benchmarks focusing mainly on financial NLP tasks, PIXIU's evaluation benchmark includes critical financialprediction tasks aligned with real-world scenarios, making it more challenging.中⽂Alpaca模型Luotuohttps://sota.jiqizhixin.com/project/luotuohttps://github.com/LC1332/Luotuo-Chinese-LLMAlpaca 是斯坦福团队基于 LLaMA 7B 在 52k 指令上微调得到的模型，能出⾊适应多种⾃然语⾔应⽤场景。
+近⽇来⾃商汤科技和华中科技⼤学开源中⽂语⾔模型 Luotuo，基于 ChatGPT API 翻译 Alpaca 微调指令数据，并使⽤ lora 进⾏微调得到。
+⽬前该项⽬已公开训练的语料和模型权重⽂件（两个型号），供开发者可使⽤⾃⼰各种⼤⼩的语料，训练⾃⼰的语⾔模型，并适⽤到对应的垂直领域。
+中⽂LLaMA&Alpaca⼤模型https://github.com/ymcui/Chinese-LLaMA-Alpaca以ChatGPT、GPT-4等为代表的⼤语⾔模型（Large Language Model, LLM）掀起了新⼀轮⾃然语⾔处理领域的研究浪潮，展现出了类通⽤⼈⼯智能（AGI）的能⼒，受到业界⼴泛关注。
+然⽽，由于⼤语⾔模型的训练和部署都极为昂贵，为构建透明且开放的学术研究造成了⼀定的阻碍。
+为了促进⼤模型在中⽂NLP社区的开放研究，本项⽬开源了中⽂LLaMA模型和经过指令精调的Alpaca⼤模型。
+这些模型在原版LLaMA的基础上扩充了中⽂词表并使⽤了中⽂数据进⾏⼆次预训练，进⼀步提升了中⽂基础语义理解能⼒。
+同时，在中⽂LLaMA的基础上，本项⽬使⽤了中⽂指令数据进⾏指令精调，显著提升了模型对指令的理解和执⾏能⼒。
+中⽂对话式⼤语⾔模型Fireflyhttps://mp.weixin.qq.com/s/tyH9Ifcvw4DKqoIoYjT6Kghttps://github.com/yangjianxin1/FireflyFirefly（流萤） 是⼀个开源的中⽂对话式⼤语⾔模型，使⽤指令微调（Instruction Tuning）在中⽂数据集上进⾏调优。
+同时使⽤了词表裁剪、ZeRO、张量并⾏等技术，有效降低显存消耗和提⾼训练效率。
+ 在训练中，我们使⽤了更⼩的模型参数量，以及更少的计算资源。
+我们构造了许多与中华⽂化相关的数据，以提升模型这⽅⾯的表现，如对联、作诗、⽂⾔⽂翻译、散⽂、⾦庸⼩说等。
+凤凰https://mp.weixin.qq.com/s/beAAh_MdqssV8bEKsccElghttps://github.com/FreedomIntelligence/LLMZooLLM Zoo is a project that provides data, models, and evaluation benchmark for large language models.【复旦】MOSShttps://github.com/OpenLMLab/MOSShttps://mp.weixin.qq.com/s/LjToZVWjQ-ot5KJFCFtA3gMOSS是⼀个⽀持中英双语和多种插件的开源对话语⾔模型，moss-moon系列模型具有160亿参数，在FP16精度下可在单张A100/A800或两张3090显卡运⾏，在INT4/8精度下可在单张3090显卡运⾏。
+MOSS基座语⾔模型在约七千亿中英⽂以及代码单词上预训练得到，后续经过对话指令微调、插件增强学习和⼈类偏好训练具备多轮对话能⼒及使⽤多种插件的能⼒。
+【复旦】MOSS-RLHFhttps://mp.weixin.qq.com/s/BjXtnEEVCQiPOy-_qCNM4ghttps://openlmlab.github.io/MOSS-RLHF/paper/SecretsOfRLHFPart1.pdfhttps://openlmlab.github.io/MOSS-RLHF/FudanNLP 团队通过⼤量、详实⼯作，设计实验充分探索了⼤模型 RLHF 的完整⼯作流程，仔细剖析了 RLHF 中的强化学习 PPO 算法的内部⼯作原理以及它在整个 RLHF 中的作⽤，并研究各种优化⽅法如何影响训练过程。
+通过这些努⼒，确定了使得 PPO 算法在⼤模型⼈类对⻬⽅⾯⾏之有效的关键因素。
+综合上述发现，该团队进⼀步总结出在⼤模型上训练更稳定的 PPO 算法版本：PPO-max。
+并使⽤ Helpful 和 Harmless 数据集全⾯评估，结果显示经过 PPO-max 算法训练的模型展现出了出⾊的⼈类对⻬性能！综合上述发现，该团队进⼀步总结出在⼤模型上训练更稳定的 PPO 算法版本：PPO-max。
+并使⽤ Helpful 和 Harmless 数据集全⾯评估，结果显示经过 PPO-max 算法训练的模型展现出了出⾊的⼈类对⻬性能！【度⼩满】轩辕-⾸个千亿级中⽂⾦融对话模型https://arxiv.org/pdf/2305.12002.pdfhttps://huggingface.co/xyz-nlp/XuanYuan2.0https://github.com/Duxiaoman-DI/XuanYuanhttps://huggingface.co/xyz-nlp/XuanYuan2.0https://zhuanlan.zhihu.com/p/632780608轩辕是国内⾸个开源的千亿级中⽂对话⼤模型，同时也是⾸个针对中⽂⾦融领域优化的千亿级开源对话⼤模型。
+轩辕在BLOOM-176B的基础上针对中⽂通⽤领域和⾦融领域进⾏了针对性的预训练与微调，它不仅可以应对通⽤领域的问题，也可以解答与⾦融相关的各类问题，为⽤户提供准确、全⾯的⾦融信息和建议。
+悟道·天鹰（Aquila）https://github.com/FlagAI-Open/FlagAI/tree/master/examples/Aquila这是⾸个具备中英双语知识、⽀持商⽤许可协议、⽀持国内数据合规要求的开源语⾔⼤模型。
+悟道·天鹰（Aquila）系列模型包括 Aquila基础模型（7B、33B），AquilaChat对话模型（7B、33B）以及 AquilaCode “⽂本-代码”⽣成模型。
+桃李：国际中⽂教育⼤模型https://github.com/blcuicall/taoli随着ChatGPT引起全社会的关注，及各类⼤语⾔模型（Large Language Model）争相亮相，通⽤领域⾃然语⾔处理任务已获得巨⼤成功，引起了国际中⽂教育领域的普遍关注。
+国际中⽂教育⼈⼠纷纷展开了对⼤模型的探讨： ⼤模型是否可以根据学习者的⽔平，提供合适的语⾔表达，或根据学习者的问题给出详细的解答，从⽽在⼀定程度上辅助甚⾄充当学习伙伴、语⾔教师？ 然⽽，⽬前通⽤领域的⼤模型在垂直领域的效果仍有限。
+为解决上述问题，我们全⾯推出适⽤于国际中⽂教育领域的⼤模型 “桃李”（Taoli）1.0 ，⼀个在国际中⽂教育领域数据上进⾏了额外训练的模型。
+我们基于⽬前国际中⽂教育领域流通的500余册国际中⽂教育教材与教辅书、汉语⽔平考试试题以及汉语学习者词典等，构建了国际中⽂教育资源库。
+ 我们设置了多种形式的指令来充分利⽤知识，构造了共计 88000 条的⾼质量国际中⽂教育问答数据集，并利⽤收集到的数据对模型进⾏指令微调，让模型习得将法律知识应⽤到具体场景中的能⼒。
+情感⼤模型PICAhttps://mp.weixin.qq.com/s/E37EFe10185THHa3pSqBighttps://github.com/NEU-DataMining/PICAhttps://huggingface.co/NEUDM/PICA-V1PICA 以清华⼤学开源的ChatGLM2-6B为基础，采⽤Prompt tuning技术在4 卡 A6000 训练⼤约15个⼩时得到。
+我们和SoulChat 进⾏了对⽐（最后部分），我们的模型在体验和安全上更有优势。
+我们只使⽤了2K的数据进⾏了p-tuning 微调，这充分说明了我们构造的数据质量⽐较⾼。
+模型权重可以在 HuggingFace 访问，欢迎各位使⽤并提出宝贵的意⻅。
+Anima：基于QLoRA的33B中⽂⼤语⾔模型https://github.com/lyogavin/AnimaAI Community从来都是⾮常开放的，AI发展到今天，离不开很多以前的重要开源⼯作，开放共享的Paper，或者的开源数据和代码。
+我们相信AI的未来也⼀定是开放的。
+希望能为开源社区做⼀些贡献。
+为什么33B模型很重要？QLoRA是个Game Changer？之前⼤部分开源可finetune的模型⼤都是⽐较⼩的模型7B或者13B，虽然可以在⼀些简单的chatbot评测集上，通过finetune训练有不错的表现。
+但是由于这些模型规模还是有限，LLM核⼼的reasoning的能⼒还是相对⽐较弱。
+这就是为什么很多这种⼩规模的模型在实际应⽤的场景表现像是个玩具。
+如这个⼯作中的论述：chatbot评测集⽐较简单，真正⽐较考验模型能⼒的复杂逻辑推理及数学问题上⼩模型和⼤模型差距还是很明显的。
+因此我们认为QLoRA 的⼯作很重要，重要到可能是个Game Changer。
+通过QLoRA的优化⽅法，第⼀次让33B规模的模型可以⽐较⺠主化的，⽐较低成本的finetune训练，并且普及使⽤。
+我们认为33B模型既可以发挥⼤规模模型的⽐较强的reasoning能⼒，⼜可以针对私有业务领域数据进⾏灵活的finetune训练提升对于LLM的控制⼒。
+BayLing: Bridging Cross-lingual Alignment and Instruction Following through Interactive Translation for Large Language Modelshttps://github.com/ictnlp/BayLinghttps://arxiv.org/abs/2306.10968BayLing (百聆, bǎi líng) is an instruction-following large language model equipped with advanced language alignment, showing superior capability in English/Chinese generation, instruction following and multi-turn interaction. BayLing can be effortlessly deployed on a consumer-grade GPU with 16GB of memory, and assists users with tasks such as translation, writing, creation, suggestion...BBT-FinCUGE-Applicationshttps://github.com/ssymmetry/BBT-FinCUGE-Applicationshttps://arxiv.org/abs/2302.09432https://bbt.ssymmetry.com/index.html1.⽬前最⼤规模的中⽂⾦融领域开源语料库BBT-FinCorpus。
+预训练语料库的规模与多样性对PLM的性能和泛化能⼒具有重要作⽤，所以为了更好的训练PLM，⾸先需要搜集⼤规模多样性的语料库。
+然⽽，⽬前中⽂⾦融领域缺乏⼤规模多样性开源语料库，已有的中⽂⾦融领域模型多数基于⼩规模的私有语料库，严重限制了中⽂⾦融PLM的能⼒提升。
+为此，我们构建了BBT-FinCorpus，⼀个包含有从四种异质性来源获取的约300GB⽂本的⼤规模多样性语料库。
+针对如何确定语料库的覆盖范围和语料来源集合的问题，我们⾸先搜集了中⽂互联⽹上可获取的所有中⽂⾦融NLP任务数据集，并根据其⽂本来源分布来确定所需要爬取的⽂本来源集合。
+在确认好需要爬取的⽂本来源集合之后，我们使⽤基于代理的分布式爬⾍技术实现⼤规模爬取⽹⻚上的⽂本。
+2.⽬前最⼤规模的中⽂⾦融领域知识增强型预训练语⾔模型BBT-FinT5。
+PLM的架构与参数量对其性能有重要影响。
+现有的中⽂⾦融领域PLM都基于较为原始的BERT模型架构，参数量也相对较⼩，不能满⾜⽇益丰富的领域NLP需求。
+因此，我们基于T5模型架构构建了⼀个拥有⼗亿参数量的⽬前最⼤规模的中⽂⾦融领域预训练语⾔模型BBT-FinT5。
+为了在有限的硬件算⼒条件下，尽可能⾼效地利⽤好硬件算⼒，我们使⽤DeepSpeed加速框架对预训练过程进⾏效率优化。
+此外，我们还针对T5模型设计了独特的知识增强预训练⽅法，通过实验证明了该⽅法的有效性。
+3.⾸个中⽂⾦融领域⾃然语⾔处理评测基准CFLEB。
+现有的⾃然语⾔处理评估基准多是通⽤领域的，没有公开可⽤的中⽂⾦融领域评测基准。
+这导致中⽂⾦融领域现有的预训练语⾔模型在不同的任务集合上进⾏评测，难以相互⽐较，阻碍了中⽂⾦融领域PLM性能的快速提升。
+为此，我们⾸先构建了⾸个中⽂⾦融领域⾃然语⾔处理评测基准CFLEB，包含六种不同的任务，涵盖对PLM理解与⽣成能⼒的评估。
+针对评测基准任务的选择及其选择标准问题，我们认为领域评测基准应当着重强调任务的实⽤性，以更好的反映学术界改进PLM对现实世界的帮助。
+为此，我们⾸先邀请⾦融领域专家对所有可获取的中⽂⾦融任务进⾏了实⽤性评价，筛选出具有较⾼实⽤性评分的任务。
+之后，我们综合任务数据集的开源情况确定了六个任务数据集作为最终的评测基准。
+该评测基准的早期版本命名为FinCUGE，包含⼋个任务，该版本⽬前已舍弃。
+BELLE: Bloom-Enhanced Large Language model Enginehttps://huggingface.co/BelleGrouphttps://github.com/LianjiaTech/BELLEhttps://zhuanlan.zhihu.com/p/616079388本项⽬⽬标是促进中⽂对话⼤模型开源社区的发展，愿景做能帮到每⼀个⼈的LLM Engine。
+现阶段本项⽬基于⼀些开源预训练⼤语⾔模型（如BLOOM），针对中⽂做了优化，模型调优仅使⽤由ChatGPT⽣产的数据（不包含任何其他数据）。
+本项⽬基于 Stanford Alpaca ，Stanford Alpaca 的⽬标是构建和开源⼀个基于LLaMA的模型。
+ Stanford Alpaca 的种⼦任务都是英语，收集的数据也都是英⽂，因此训练出来的模型未对中⽂优化。
+本项⽬⽬标是促进中⽂对话⼤模型开源社区的发展。
+本项⽬针对中⽂做了优化，模型调优仅使⽤由ChatGPT⽣产的数据（不包含任何其他数据）。
+Bloomhttps://huggingface.co/blog/bloomhttps://huggingface.co/bigscience/bloomBLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.BiLLa: A Bilingual LLaMA with Enhanced Reasoning Abilityhttps://zhuanlan.zhihu.com/p/628688680https://github.com/Neutralzz/BiLLaBiLLa是开源的推理能⼒增强的中英双语LLaMA模型。
+模型的主要特性有：较⼤提升LLaMA的中⽂理解能⼒，并尽可能减少对原始LLaMA英⽂能⼒的损伤；训练过程增加较多的任务型数据，利⽤ChatGPT⽣成解析，强化模型理解任务求解逻辑；全量参数更新，追求更好的⽣成效果。
+BLOOMChat176Bhttps://mp.weixin.qq.com/s/cY6ORD8CUyXRL0l20EjwqQhttps://sambanova.ai/blog/introducing-bloomchat-176b-the-multilingual-chat-based-llm/https://huggingface.co/spaces/sambanovasystems/BLOOMChathttps://github.com/sambanova/bloomchat开源对话模型⼀直跟闭源模型在多语⾔能⼒上存在差距。
+SambaNova 和斯坦福 Together Computer 开源可商⽤的多语⾔聊天模型 BLOOMChat 176B，⽀持中⽂。
+BLOOMChat 在SambaNova ⾃研芯⽚ RDU 上完成训练，借助 SambaNova 的独特可重构数据流架构，利⽤ BLOOM开源模型的核⼼能⼒，通过在 OpenChatKit、Dolly 2.0 和 OASST1 的 OIG 上进⾏微调。
+在基于六种语⾔的早期双盲测试中，BLOOMChat 在66%的测评数据上产⽣的对话表现优于近期的开源对话模型。
+同时在与 GPT4 的基于六种语⾔的⼈⼯测评对⽐中，BLOOMChat 得到 45%对55%的胜率，⼤⼤缩⼩开源和闭源模型的多语⾔对话能⼒差距。
+当前 BLOOMChat 开源模型⽂件，⽀持在 huggingface 在线推理试⽤。
+ChatLaw 法律⼤模型https://www.chatlaw.cloud/https://github.com/PKU-YuanGroup/ChatLawhttps://arxiv.org/pdf/2306.16092.pdf但愿世间不纷争，何惜法典卷⽣尘ChatGPT浪潮下，⼈⼯智能的不断扩展和发展为LLM的扩散提供了肥沃的⼟壤，⽬前医疗、教育、⾦融领域已逐渐有了各⾃的模型，但法律领域迟迟没有明显进展。
+为了促进LLM在法律甚⾄其他垂直应⽤落地的开放研究，本项⽬开源了中⽂法律⼤模型，并针对LLM和知识库的结合问题给出了法律场景下合理的解决⽅案。
+ChatLaw法律⼤模型⽬前开源的仅供学术参考的版本底座为姜⼦⽛-13B、Anima-33B，我们使⽤⼤量法律新闻、法律论坛、法条、司法解释、法律咨询、法考题、判决⽂书等原始⽂本来构造对话数据。
+基于姜⼦⽛-13B的模型是第⼀版模型，得益于姜⼦⽛的优秀中⽂能⼒和我们对数据清洗、数据增强过程的严格要求，我们在逻辑简单的法律任务上表现优异，但涉及到复杂逻辑的法律推理任务时往往表现不佳。
+随后基于Anima-33B，我们增加了训练数据，做成了ChatLaw-33B，发现逻辑推理能⼒⼤幅提升，由此可⻅，⼤参数的中⽂LLM是⾄关重要的。
+我们的技术报告在这⾥: arXiv: ChatLaw基于可商⽤的模型训练⽽成的版本会作为我们后续产品内部接⼊的版本，对外不开源，可以在这⾥进⾏开源版本模型的试⽤Chinese-Vicuna-medicalhttps://github.com/Facico/Chinese-Vicuna/blob/master/docs/performance-medical.md在cMedQA2上使⽤我们的checkpoint-11600 continue finetune⽬前从2个epoch的Vicuna开始continue finetune，效果⽐3个epoch的在医疗问答数据更具有专业性，同时由于数据集构建的问题，会更加规范，⽐如经常性的加上“到正规医院检查”等等同时验证了指令微调的有效性使⽤单指令continue-finetune能保留原来更多的性能Cornucopia-LLaMA-Fin-Chinesehttps://github.com/jerry1993-tech/Cornucopia-LLaMA-Fin-Chinese聚宝盆(Cornucopia): 基于中⽂⾦融知识的LLaMA微调模型 本项⽬开源了经过中⽂⾦融知识指令精调/指令微调(Instruct-tuning) 的LLaMA-7B模型。
+通过中⽂⾦融公开数据+爬取的⾦融数据构建指令数据集，并在此基础上对LLaMA进⾏了指令微调，提⾼了 LLaMA 在⾦融领域的问答效果。
+基于相同的数据，后期还会利⽤GPT3.5 API构建⾼质量的数据集，另在中⽂知识图谱-⾦融上进⼀步扩充⾼质量的指令数据集陆续会发布研发的新模型（next-pretrain、multi-task SFT、RLHF Optimize），欢迎⼤家届时使⽤体验。
+chatglm-mathshttps://github.com/yongzhuo/chatglm-mathschatglm-6b微调/LORA/PPO/推理, 样本为⾃动⽣成的整数/⼩数加减乘除运算, 可gpu/cpu。
+ChatRWKVhttps://github.com/BlinkDL/ChatRWKVChatRWKV is like ChatGPT but powered by my RWKV (100% RNN) language model, which is the only RNN (as of now) that can match transformers in quality and scaling, while being faster and saves VRAM. Training sponsored by Stability EleutherAI :)ChatYuanhttps://github.com/clue-ai/ChatYuanhttps://modelscope.cn/models/ClueAI/ChatYuan-large元语功能型对话⼤模型, 这个模型可以⽤于问答、结合上下⽂做对话、做各种⽣成任务，包括创意性写作，也能回答⼀些像法律、新冠等领域问题。
+它基于PromptCLUE-large结合数亿条功能对话多轮对话数据进⼀步训练得到。
+PromptCLUE-large在1000亿token中⽂语料上预训练，累计学习1.5万亿中⽂token，并且在数百种任务上进⾏Prompt任务式训练。
+针对理解类任务，如分类、情感分析、抽取等，可以⾃定义标签体系；针对多种⽣成任务，可以进⾏采样⾃由⽣成。
+ChatGLM-6Bhttps://github.com/THUDM/ChatGLM-6Bhttps://github.com/THUDM/ChatGLM-6B/tree/main/ptuningChatGLM-6B 是⼀个开源的、⽀持中英双语的对话语⾔模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。
+结合模型量化技术，⽤户可以在消费级的显卡上进⾏本地部署（INT4 量化级别下最低只需 6GB 显存）。
+ ChatGLM-6B 使⽤了和 ChatGPT 相似的技术，针对中⽂问答和对话进⾏了优化。
+经过约 1T 标识符的中英双语训练，辅以监督微调、反馈⾃助、⼈类反馈强化学习等技术的加持，62 亿参数的 ChatGLM-6B 已经能⽣成相当符合⼈类偏好的回答。
+更多信息请参考我们的博客。
+ChatGLM2-6Bhttps://github.com/THUDM/ChatGLM2-6BChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第⼆代版本，在保留了初代模型对话流畅、部署⻔槛较低等众多优秀特性的基础之上，ChatGLM2-6B 引⼊了如下新特性：更强⼤的性能：基于 ChatGLM 初代模型的开发经验，我们全⾯升级了 ChatGLM2-6B 的基座模型。
+ChatGLM2-6B 使⽤了 GLM 的混合⽬标函数，经过了 1.4T 中英标识符的预训练与⼈类偏好对⻬训练，评测结果显示，相⽐于初代模型，ChatGLM2-6B 在 MMLU（+23%）、CEval（+33%）、GSM8K（+571%） 、BBH（+60%）等数据集上的性能取得了⼤幅度的提升，在同尺⼨开源模型中具有较强的竞争⼒。
+更⻓的上下⽂：基于 FlashAttention 技术，我们将基座模型的上下⽂⻓度（Context Length）由 ChatGLM-6B 的 2K 扩展到了 32K，并在对话阶段使⽤ 8K 的上下⽂⻓度训练，允许更多轮次的对话。
+但当前版本的 ChatGLM2-6B 对单轮超⻓⽂档的理解能⼒有限，我们会在后续迭代升级中着重进⾏优化。
+更⾼效的推理：基于 Multi-Query Attention 技术，ChatGLM2-6B 有更⾼效的推理速度和更低的显存占⽤：在官⽅的模型实现下，推理速度相⽐初代提升了 42%，INT4 量化下，6G 显存⽀持的对话⻓度由 1K 提升到了 8K。
+更开放的协议：ChatGLM2-6B 权重对学术研究完全开放，在获得官⽅的书⾯许可后，亦允许商业使⽤。
+如果您发现我们的开源模型对您的业务有⽤，我们欢迎您对下⼀代模型 ChatGLM3 研发的捐赠。
+Chinese-Transformer-XLhttps://github.com/THUDM/Chinese-Transformer-XL本项⽬提供了智源研究院"⽂汇" 预训练模型Chinese-Transformer-XL的预训练和⽂本⽣成代码。
+ChatMed-TCM & ChatMed-Consulthttps://github.com/michael-wzhu/ChatMedChatMed-Consult : 基于中⽂医疗在线问诊数据集ChatMed_Consult_Dataset的50w+在线问诊+ChatGPT回复作为训练集。
+模型主⼲为LlaMA-7b,融合了Chinese-LlaMA-Alpaca的LoRA权重与中⽂扩展词表，然后再进⾏基于LoRA的参数⾼效微调。
+我们将全部代码都进⾏了公开。
+我们也将部署⼀个在线Gradio demo, 敬请关注。
+ChatMed-TCM : ⼤模型赋能中医药传承。
+这⼀模型的训练数据为中医药指令数据集ChatMed_TCM_Dataset。
+以我们开源的中医药知识图谱为基础，采⽤以实体为中⼼的⾃指令⽅法(entity-centric self-instruct)，调⽤ChatGPT得到2.6w+的围绕中医药的指令数据。
+ChatMed-TCM模型也是以LlaMA为底座，采⽤LoRA微调得到。
+ChatGLM-Medhttps://github.com/SCIR-HI/Med-ChatGLM基于中⽂医学知识的ChatGLM模型微调，本项⽬开源了经过中⽂医学指令精调/指令微调(Instruct-tuning) 的ChatGLM-6B模型。
+我们通过医学知识图谱和GPT3.5 API构建了中⽂医学指令数据集，并在此基础上对ChatGLM-6B进⾏了指令微调，提⾼了ChatGLM在医疗领域的问答效果。
+CPM-Beehttps://mp.weixin.qq.com/s/UCW1BT60Lr9x24Rj0cLuxwhttps://huggingface.co/openbmb/cpm-bee-10bhttps://github.com/OpenBMB/CPM-BeeCPM-Bee 是⼀个 完全开源、允许商⽤ 的百亿参数中英⽂基座模型。
+它采⽤ Transformer ⾃回归架构（auto-regressive），使⽤万亿级⾼质量语料进⾏预训练，拥有强⼤的基础能⼒。
+CPM-Bee 的特点可以总结如下：开源可商⽤：OpenBMB 始终秉承“让⼤模型⻜⼊千家万户”的开源精神，CPM-Bee 基座模型将完全开源并且可商⽤，以推动⼤模型领域的发展。
+如需将模型⽤于商业⽤途，只需企业实名邮件申请并获得官⽅授权证书，即可商⽤使⽤。
+中英双语性能优异：CPM-Bee 基座模型在预训练语料上进⾏了严格的筛选和配⽐，同时在中英双语上具有亮眼表现，具体可参⻅评测任务和结果。
+超⼤规模⾼质量语料：CPM-Bee基座模型在万亿级语料上进⾏训练，是开源社区内经过语料最多的模型之⼀。
+同时，我们对预训练语料进⾏了严格的筛选、清洗和后处理以确保质量。
+OpenBMB⼤模型系统⽣态⽀持：OpenBMB ⼤模型系统在⾼性能预训练、适配、压缩、部署、⼯具开发了⼀系列⼯具，CPM-Bee 基座模型将配套所有的⼯具脚本，⾼效⽀持开发者进⾏进阶使⽤。
+强⼤的对话和⼯具使⽤能⼒：结合OpenBMB 在指令微调和⼯具学习的探索，我们在 CPM-Bee 基座模型的基础上进⾏微调，训练出了具有强⼤对话和⼯具使⽤能⼒的实例模型，现已开放定向邀请内测，未来会逐步向公众开放。
+* 【Data-Copilot】https://github.com/zwq2018/Data-Copilothttps://arxiv.org/abs/2306.07209https://huggingface.co/spaces/zwq2018/Data-CopilotData-Copilot 是⼀个基于 LLM 的系统，⽤于处理与数据相关的任务，连接了数⼗亿条数据和多样化的⽤户需求。
+它独⽴设计接⼝⼯具，以⾼效地管理、调⽤、处理和可视化数据。
+在接收到复杂请求时，Data-Copilot 会⾃主调⽤这些⾃设计的接⼝，构建⼀个⼯作流程来满⾜⽤户的意图。
+在没有⼈类协助的情况下，它能够熟练地将来⾃不同来源、不同格式的原始数据转化为⼈性化的输出，如图形、表格和⽂本。
+DoctorGLM⏳!https://github.com/xionghonglin/DoctorGLMDoctorGLM，基于 ChatGLM-6B的中⽂问诊模型。
+EduChathttps://github.com/icalk-nlp/EduChat教育是影响⼈的身⼼发展的社会实践活动，旨在把⼈所固有的或潜在的素质⾃内⽽外激发出来。
+因此，必须贯彻“以⼈为本”的教育理念，重点关注⼈的个性化、引导式、身⼼全⾯发展。
+为了更好地助⼒”以⼈为本“的教育，华东师范⼤学计算机科学与技术学院的EduNLP团队探索了针对教育垂直领域的对话⼤模型EduChat相关项⽬研发。
+该项⽬主要研究以预训练⼤模型为基底的教育对话⼤模型相关技术，融合多样化的教育垂直领域数据，辅以指令微调、价值观对⻬等⽅法，提供教育场景下⾃动出题、作业批改、情感⽀持、课程辅导、⾼考咨询等丰富功能，服务于⼴⼤⽼师、学⽣和家⻓群体，助⼒实现因材施教、公平公正、富有温度的智能教育。
+EVA: ⼤规模中⽂开放域对话系统https://github.com/thu-coai/EVAEVA 是⽬前最⼤的开源中⽂预训练对话模型，拥有28亿参数，主要擅⻓开放域闲聊，⽬前有 1.0 和 2.0 两个版本。
+其中，1.0版本在 WudaoCorpus-Dialog 上训练⽽成，2.0 版本在从 WudaoCorpus-Dialog 中清洗出的更⾼质量的对话数据上训练⽽成，模型性能也明显好于 EVA1.0。
+GPT2 for Multiple Languagehttps://github.com/imcaspar/gpt2-ml简化整理 GPT2 训练代码（based on Grover, supporting TPUs）移植 bert tokenizer，添加多语⾔⽀持15亿参数 GPT2 中⽂预训练模型( 15G 语料，训练 10w 步 )开箱即⽤的模型⽣成效果 demo #15亿参数 GPT2 中⽂预训练模型( 30G 语料，训练 22w 步 )InternLM 书⽣・浦语https://github.com/InternLMhttps://mp.weixin.qq.com/s/oTXnvWZJVdoOpFLHngbTYQhttps://intern-ai.org.cn/homeInternLM has open-sourced a 7 billion parameter base model and a chat model tailored for practical scenarios. The model has the following characteristics:It leverages trillions of high-quality tokens for training to establish a powerful knowledge base. It supports an 8k context window length, enabling longer input sequences and stronger reasoning capabilities.It provides a versatile toolset for users to flexibly build their own workflows. Additionally, a lightweight training framework is offered to support model pre-training without the need for extensive dependencies. With a single codebase, it supports pre-training on large-scale clusters with thousands of GPUs, and fine-tuning on a single GPU while achieving remarkable performance optimizations. InternLM achieves nearly 90% acceleration efficiency during training on 1024 GPUs.LaWGPThttps://github.com/pengxiao-song/LaWGPTLaWGPT 是⼀系列基于中⽂法律知识的开源⼤语⾔模型。
+该系列模型在通⽤中⽂基座模型（如 Chinese-LLaMA、ChatGLM 等）的基础上扩充法律领域专有词表、⼤规模中⽂法律语料预训练，增强了⼤模型在法律领域的基础语义理解能⼒。
+在此基础上，构造法律领域对话问答数据集、中国司法考试数据集进⾏指令精调，提升了模型对法律内容的理解和执⾏能⼒。
+Lawyer LLaMAhttps://github.com/AndrewZhe/lawyer-llamaLawyer LLaMA ⾸先在⼤规模法律语料上进⾏了continual pretraining，让它系统的学习中国的法律知识体系。
+ 在此基础上，我们借助ChatGPT收集了⼀批对中国国家统⼀法律职业资格考试客观题（以下简称法考）的分析和对法律咨询的回答，利⽤收集到的数据对模型进⾏指令微调，让模型
