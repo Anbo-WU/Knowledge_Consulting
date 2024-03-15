@@ -8,4 +8,15 @@
 
 5.Some annotation should be added n at least one new means should to write. It is plain to see that I may update this file. Hope I could do it soon.
 
--- v1.0.0 by Abbott--
+-- v1.0  by Abbott  04/03/2024--
+
+
+1. Added a new means to materialise text partition without changing the canonical form put forward before. Now the segmented pieces will all be settled in only csv file, which is more judicious considering the cooperation with the API code. See the file: segment_to_context.ipynb
+
+2.Some annotation should be added. Maybe I will write the special character method although it is deprecated for assignment now. I am not sure.
+
+
+-- v2.0  by Abbott  15/03/2024--
+
+
+
